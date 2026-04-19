@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h2>Wallet Simulator</h2>
+
+    <p id="balance">Balance: 100</p>
+
+    <button onclick="send()">Send 10</button>
+    <button onclick="receive()">Receive 10</button>
+
+    <script>
+      let balance = 100;
+
+      function update() {
+        document.getElementById("balance").innerText = "Balance: " + balance;
+      }
+
+      function send() {
+        balance -= 10;
+        update();
+      }
+
+      function receive() {
+        balance += 10;
+        update();
+      }
+    </script>
+
+  </body>
+</html>
